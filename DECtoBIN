@@ -1,0 +1,47 @@
+
+/**
+ *
+ * @author Adanike Oluwaseun
+ */
+
+/*
+ *      a program to convert decimal number to binary
+ *
+ */
+import java.util.Scanner;
+
+public class DECtoBIN {
+ 
+    
+    public static void main(String... Seun) {
+        
+    int quotient, i = 0, rem, initial;
+    String binary = "", inverse = "";
+    
+        Scanner decimal = new Scanner(System.in);
+        
+        System.out.print("Enter the decimal number to be converted: ");
+        int decimalno = decimal.nextInt();
+        initial = decimalno;
+   
+        do
+        {
+     
+        rem = decimalno % 2;  
+        quotient = decimalno / 2;
+        decimalno = quotient;
+        binary = binary + "" + rem;
+
+        i++;   
+        } 
+     
+        while(quotient != 0);
+           
+        
+        for(int z = binary.length() - 1; z >= 0; z--)
+        {
+            inverse = inverse + binary.charAt(z);
+        }
+    System.out.println("The binary number of " + initial + " is " + inverse); 
+    }
+}
